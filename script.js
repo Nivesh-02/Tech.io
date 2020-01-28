@@ -1,3 +1,39 @@
+const Locations = [
+  {
+    placename: "LT1",
+    latitude: 25.260215,
+    longitude: 82.991178
+  },
+  {
+    placename: "LC",
+    latitude: 25.260708,
+    longitude: 82.986878
+  },
+  {
+    placename: "IITBHU",
+    latitude: 25.263308,
+    longitude: 82.989659
+  },
+  {
+    placename: "VISHAWANATH TEMPLE",
+    latitude: 25.265955,
+    longitude: 82.987942
+  },{
+    placename: "SURAJ SAINI ROOM",
+    latitude: 25.258398,
+    longitude: 82.985758
+  },{
+    placename: "SAMPREETHDEVARAKONDA ROOM",
+    latitude: 25.257775,
+    longitude: 82.985382
+  },{
+    placename: "Karma Center",
+    latitude: 25.258140,
+    longitude: 82.985531
+  },
+];
+
+
 // getting places from APIs
 function loadPlaces(position) {
     const params = {
@@ -38,7 +74,22 @@ window.onload = () => {
     return navigator.geolocation.getCurrentPosition(function (position) {
 
         // than use it to load from remote APIs some places nearby
-        loadPlaces(position.coords)
+        Locations.forEach((place) => {
+            const latitude = place.latitude;
+            const longitude = place.longitude;
+
+            const icon = document.createElement('a-image');
+            icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+            icon.setAttribute('name', place.placename);
+            icon.setAttribute('scale', '20 20 20');
+            icon.setAttribute('src', './assets/map-marker.png');
+            icon.addEventListener('loaded', () => {
+                window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+            });
+
+            scene.appendChild(icon);
+        })
+        /*loadPlaces(position.coords)
             .then((places) => {
                 places.forEach((place) => {
                     const latitude = place.location.lat;
@@ -56,7 +107,7 @@ window.onload = () => {
 
                     scene.appendChild(placeText);
                 });
-            })
+            })*/
     },
         (err) => console.error('Error in retrieving position', err),
         {
