@@ -78,11 +78,13 @@ window.onload = () => {
             const latitude = place.latitude;
             const longitude = place.longitude;
 
-            const icon = document.createElement('a-image');
+            const icon = document.createElement('a-entity');
             icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
             icon.setAttribute('name', place.placename);
-            icon.setAttribute('scale', '20 20');
-            icon.setAttribute('src', './assets/magnemite/scene.gltf');
+            icon.setAttribute('gltf-model', './assets/magnemite/scene.gltf');
+            icon.setAttribute('rotation', '0 180 0');
+            icon.setAttribute('animation-mixer', '');
+            icon.setAttribute('scale', '15 15 15');
             icon.addEventListener('loaded', () => {
                 window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
             });
