@@ -82,7 +82,7 @@ window.onload = () => {
             icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
             icon.setAttribute('name', place.placename);
             icon.setAttribute('scale', '20 20');
-            icon.setAttribute('src', '/assets/magnemite/scene.gltf');
+            icon.setAttribute('src', './assets/magnemite/scene.gltf');
             icon.addEventListener('loaded', () => {
                 window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
             });
