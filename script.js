@@ -84,7 +84,7 @@ window.onload = () => {
             icon.setAttribute('gltf-model', './assets/bot/scene.gltf');
             icon.setAttribute('rotation', '0 180 0');
             icon.setAttribute('animation-mixer', '');
-            icon.setAttribute('scale', '15 15 15');
+            icon.setAttribute('scale', '30 30 30');
             icon.addEventListener('loaded', () => {
                 window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
             });
