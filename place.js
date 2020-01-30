@@ -49,7 +49,7 @@ window.onload = () => {
             icon.setAttribute('gltf-model', './assets/signedit/newedit.gltf');
             icon.setAttribute('rotation', '0 180 0');
             icon.setAttribute('animation-mixer', '');
-            icon.setAttribute('scale', '30 30 30');
+            icon.setAttribute('scale', '15 15 15');
             icon.addEventListener('loaded', () => {
                 window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'));
             });
