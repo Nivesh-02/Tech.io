@@ -1,35 +1,9 @@
 const Locations = [
   {
-    placename: "LT1",
-    latitude: 25.260215,
-    longitude: 82.991178
-  },{
     placename: "LC",
     latitude: 25.260708,
     longitude: 82.986878
-  },
-  {
-    placename: "IITBHU",
-    latitude: 25.263308,
-    longitude: 82.989659
-  },
-  {
-    placename: "VT",
-    latitude: 25.265955,
-    longitude: 82.987942
-  },{
-    placename: "SURAJ SAINI ROOM",
-    latitude: 25.258398,
-    longitude: 82.985758
-  },{
-    placename: "SAMPREETHDEVARAKONDA ROOM",
-    latitude: 25.257775,
-    longitude: 82.985382
-  },{
-    placename: "Karma Center",
-    latitude: 25.258140,
-    longitude: 82.985531
-  },
+  }
 ];
 
 window.onload = () => {
