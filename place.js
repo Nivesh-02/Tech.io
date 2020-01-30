@@ -46,7 +46,7 @@ window.onload = () => {
             const icon = document.createElement('a-entity');
             icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
             icon.setAttribute('name', place.placename);
-            icon.setAttribute('gltf-model', './assets/signal.gltf');
+            icon.setAttribute('gltf-model', './assets/signedit/newedit.gltf');
             icon.setAttribute('rotation', '0 180 0');
             icon.setAttribute('animation-mixer', '');
             icon.setAttribute('scale', '30 30 30');
