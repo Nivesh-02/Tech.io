@@ -40,7 +40,7 @@ window.onload = () => {
       Locations.forEach(place => {
         const latitude = place.latitude;
         const longitude = place.longitude;
-        const icon = document.createElement('a-image');
+        const icon = document.createElement('a-entity');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.placename);
                     icon.setAttribute('gltf-model', './assets/signal.gltf');
