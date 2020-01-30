@@ -43,10 +43,11 @@ window.onload = () => {
         const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.placename);
-                    icon.setAttribute('src', './assets/signal.png');
+                    icon.setAttribute('gltf-model', './assets/signal.gltf');
+                    icon.setAttribute('rotation'. '0 180 0');
                     icon.setAttribute('animation-mixer', '');
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
-                    icon.setAttribute('scale', '10,,10 10');
+                    icon.setAttribute('scale', '30 30 30');
                     // icon.setAttribute('fbx-model', './x/arrow.fbx');
                     icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
                     const clickListener = function(ev) {
