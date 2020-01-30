@@ -20,9 +20,9 @@ window.onload = () => {
             const icon = document.createElement('a-entity');
             icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
             icon.setAttribute('name', place.placename);
-            icon.setAttribute('gltf-model', './assets/signa/signa.gltf');
-            //icon.setAttribute('rotation', '0 180 0');
-            icon.setAttribute('animation-mixer', '');
+            icon.setAttribute('gltf-model', './assets/cube25.gltf');
+            icon.setAttribute('rotation', '0 180 0');
+            //icon.setAttribute('animation-mixer', '');
             icon.setAttribute('scale', '15 15 15');
             icon.addEventListener('loaded', () => {
                 window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'));
